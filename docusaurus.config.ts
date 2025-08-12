@@ -22,13 +22,16 @@ const config: Config = {
   url: 'https://quicknoteapp.com',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/qn-website/',
+
+  trailingSlash: true, // Ensure URLs end with a trailing slash
   
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'kaunteya', // Usually your GitHub org/user name.
   projectName: 'qn-website', // Usually your repo name.
-  
+  deploymentBranch: 'main', // Branch that GitHub pages will deploy from.
+
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   
