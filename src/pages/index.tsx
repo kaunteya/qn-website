@@ -5,6 +5,7 @@ import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import Heading from '@theme/Heading';
 import MacAppStoreImageSVG from '@site/static/img/download-mac-appstore.svg';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
 import styles from './index.module.css';
 
@@ -37,7 +38,7 @@ export default function Home(): ReactNode {
       <HomepageHeader />
       <main className={styles.mainContainer}>
        <DownLoadButton/>
-        <img src="/img/banner.png" alt="App Screenshot" style={{ width: '100%', maxWidth: '1200px'}}/>
+        <img src={useBaseUrl('/img/banner.png')} alt="App Screenshot" style={{ width: '100%', maxWidth: '1200px'}}/>
         {/* <HomepageFeatures /> */}
       </main>
     </Layout>
