@@ -18,12 +18,7 @@ const config: Config = {
     v4: true, // Improve compatibility with the upcoming Docusaurus v4
   },
   
-  // url: 'https://kaunteya.github.io',
-
-  // Set the production url of your site here
   url: 'https://quicknoteapp.com',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
 
   trailingSlash: true, // Ensure URLs end with a trailing slash
