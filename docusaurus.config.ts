@@ -18,7 +18,7 @@ const config: Config = {
     v4: true, // Improve compatibility with the upcoming Docusaurus v4
   },
   
-  url: 'https://quicknoteapp.com',
+  url: 'https://kaunteya.github.io',
 
   // Set the production url of your site here
   // url: 'https://quicknoteapp.com',
