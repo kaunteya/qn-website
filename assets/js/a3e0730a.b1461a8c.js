@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocu_website=self.webpackChunkdocu_website||[]).push([[6887],{4722:e=>{e.exports=JSON.parse('{"metadata":{"permalink":"/qn-website/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":4,"blogDescription":"Blog","blogTitle":"Blog"}}')}}]);
