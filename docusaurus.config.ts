@@ -81,8 +81,7 @@ const config: Config = {
         src: 'img/app-icon.png'
       },
       items: [
-        {to: '/docs', label: 'Docs', position: 'left'},
-        {to: '/blog', label: 'Blog', position: 'left'},
+        {to: '/docs', label: 'Docs', position: 'left'}
       ],
     },
     colorMode: {
