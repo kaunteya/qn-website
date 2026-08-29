@@ -1,6 +1,7 @@
 import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
+import staticHomePagePlugin from './plugins/static-home-page';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
@@ -29,7 +30,12 @@ const config: Config = {
   projectName: 'qn-website', // Usually your repo name.
 
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: 'warn',
+    },
+  },
   
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
@@ -39,6 +45,10 @@ const config: Config = {
     locales: ['en'],
   },
   
+  // The home page is a plain HTML/CSS/JS page in `home/`, not a Docusaurus
+  // page. Everything under /docs and /blog is still built by Docusaurus.
+  plugins: [staticHomePagePlugin],
+
   presets: [
     [
       'classic',
@@ -74,7 +84,12 @@ const config: Config = {
       title: 'Quick Note',
       logo: {
         alt: 'Quick Note Logo',
-        src: 'img/app-icon.png'
+        src: 'img/app-icon.png',
+        // The home page is a plain static page (home/index.html), not a
+        // Docusaurus route. target '_top' makes this a regular <a>, so the
+        // router doesn't try (and fail) to navigate to it client-side.
+        href: '/',
+        target: '_top',
       },
       items: [
         {to: '/docs', label: 'Docs', position: 'left'}
