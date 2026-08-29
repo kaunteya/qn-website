@@ -1,7 +1,6 @@
 
 # Troubleshooting iCloud Sync
 
-- Ensure iCloud sync is enabled in the Quick Note settings on all devices you wish to sync.
 - Ensure all devices are online.
 - Ensure your iCloud storage is not full.
 - Resolve any Apple ID or iCloud errors on your devices (e.g., sign-in prompts).
