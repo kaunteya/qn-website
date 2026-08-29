@@ -1,6 +1,10 @@
 (function () {
 	'use strict';
 
+	// Tell the <head> bootstrap the reveal logic is here, so it leaves the
+	// hiding in place rather than falling back to showing everything.
+	document.documentElement.classList.add('reveal-ready');
+
 	var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 	// Header gets a hairline border once the page moves.
