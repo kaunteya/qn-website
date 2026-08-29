@@ -7,7 +7,7 @@ import staticHomePagePlugin from './plugins/static-home-page';
 
 const config: Config = {
   title: 'Sticky Notes in Menubar',
-  tagline: 'Floating notes with beautiful colors for tasks, ideas and to-dos.',
+  tagline: 'One keystroke to a new note that stays on top of everything.',
   favicon: 'img/favicon.png',
   
   customFields: {
