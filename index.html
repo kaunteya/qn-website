@@ -16,8 +16,26 @@
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="theme-color" content="#ffffff" />
 
-	<link rel="preload" as="image" href="/img/banner.png" />
 	<link rel="stylesheet" href="/css/home.css" />
+	<script src="/js/home.js" defer></script>
+
+	<!--
+		The reveal animation hides content until JS runs, so the code that does the
+		hiding ships inline with the HTML rather than over the network. If home.js
+		hasn't taken over shortly, stop hiding: a slow or failed script must never
+		leave a blank page.
+	-->
+	<script>
+		(function () {
+			var html = document.documentElement;
+			html.classList.add('js-reveal');
+			setTimeout(function () {
+				if (!html.classList.contains('reveal-ready')) {
+					html.classList.remove('js-reveal');
+				}
+			}, 2000);
+		})();
+	</script>
 </head>
 <body>
 	<a class="skip-link" href="#main">Skip to content</a>
@@ -58,7 +76,7 @@
 				<p class="hero-note" data-reveal>Free to try · Upgrade once, keep it forever</p>
 
 				<div class="hero-shot" data-reveal data-tilt>
-					<img src="/img/banner.png" width="1890" height="1164" alt="Quick Note sticky notes floating above a Mac desktop, with the menu bar menu open" />
+					<img src="/img/banner.png" width="1890" height="1164" fetchpriority="high" alt="Quick Note sticky notes floating above a Mac desktop, with the menu bar menu open" />
 				</div>
 			</div>
 		</section>
@@ -191,6 +209,5 @@
 		</div>
 	</footer>
 
-	<script src="/js/home.js"></script>
 </body>
 </html>
