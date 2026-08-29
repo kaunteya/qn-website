@@ -14,6 +14,13 @@
   --ifm-color-primary-lighter: #359962;
   --ifm-color-primary-lightest: #3cad6e;
   --ifm-code-font-size: 95%;
+
+	/*
+	 * Same rounded stack as the landing page, so the two halves of the site match.
+	 * Headings inherit it via --ifm-heading-font-family; code keeps its mono stack.
+	 */
+	--ifm-font-family-base: "SF Pro Rounded", ui-rounded, -apple-system, BlinkMacSystemFont,
+		"SF Pro Text", system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
