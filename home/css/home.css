@@ -461,6 +461,10 @@ h3 {
 	will-change: transform;
 }
 
+.hero-shot picture {
+	display: block;
+}
+
 .hero-shot img {
 	display: block;
 	width: 100%;

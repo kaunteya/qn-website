@@ -76,7 +76,17 @@
 				<p class="hero-note" data-reveal>Free to try · Upgrade once, keep it forever</p>
 
 				<div class="hero-shot" data-reveal data-tilt>
-					<img src="/img/banner.png" width="1890" height="1164" fetchpriority="high" alt="Quick Note sticky notes floating above a Mac desktop, with the menu bar menu open" />
+					<picture>
+						<!--
+							The PNG stays as the fallback and remains the og:image, since
+							social scrapers handle it more reliably than WebP.
+						-->
+						<source
+							type="image/webp"
+							srcset="/img/banner-640.webp 640w, /img/banner-960.webp 960w, /img/banner-1280.webp 1280w, /img/banner-1890.webp 1890w"
+							sizes="(min-width: 1120px) 1080px, calc(100vw - 40px)" />
+						<img src="/img/banner.png" width="1890" height="1164" fetchpriority="high" alt="Quick Note sticky notes floating above a Mac desktop, with the menu bar menu open" />
+					</picture>
 				</div>
 			</div>
 		</section>
