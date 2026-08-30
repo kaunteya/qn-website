@@ -88,6 +88,43 @@
 						<img src="/img/banner.png" width="1890" height="1164" fetchpriority="high" alt="Quick Note sticky notes floating above a Mac desktop, with the menu bar menu open" />
 					</picture>
 				</div>
+
+				<!--
+					App Store standing. Both wreath halves are one file fetched once: the
+					right one is the left one flipped in CSS.
+				-->
+				<div class="rating" data-reveal>
+					<img class="laurel" src="/img/wreath.svg" width="450" height="950" alt="" />
+
+					<div class="rating-body">
+						<p class="rating-title">Loved by Mac users</p>
+						<p class="rating-score">4.7<span>/5</span></p>
+						<svg class="stars" viewBox="0 0 100 19" aria-hidden="true">
+							<defs>
+								<path id="ratingStar" d="M10.00 0.70L12.29 6.44 18.46 6.85 13.71 10.81 15.23 16.80 10.00 13.50 4.77 16.80 6.29 10.81 1.54 6.85 7.71 6.44Z"/>
+								<!-- 4.7 of 5 stars is 94% of the row's width. -->
+								<clipPath id="ratingClip"><rect width="94" height="19"/></clipPath>
+							</defs>
+							<g fill="currentColor">
+								<use href="#ratingStar" x="0"/>
+								<use href="#ratingStar" x="20"/>
+								<use href="#ratingStar" x="40"/>
+								<use href="#ratingStar" x="60"/>
+								<use href="#ratingStar" x="80"/>
+							</g>
+							<g fill="#f0a43a" clip-path="url(#ratingClip)">
+								<use href="#ratingStar" x="0"/>
+								<use href="#ratingStar" x="20"/>
+								<use href="#ratingStar" x="40"/>
+								<use href="#ratingStar" x="60"/>
+								<use href="#ratingStar" x="80"/>
+							</g>
+						</svg>
+						<p class="rating-count">6,280 App Store ratings</p>
+					</div>
+
+					<img class="laurel laurel-right" src="/img/wreath.svg" width="450" height="950" alt="" />
+				</div>
 			</div>
 		</section>
 

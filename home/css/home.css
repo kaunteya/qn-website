@@ -471,6 +471,75 @@ h3 {
 	filter: drop-shadow(0 32px 48px rgba(14, 17, 22, 0.22));
 }
 
+/* ---------- App Store rating ---------- */
+
+.rating {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: clamp(0.15rem, 1.5vw, 0.6rem);
+	/* Clears the screenshot's drop shadow, which falls well below its box. */
+	margin-top: clamp(3rem, 6vw, 4rem);
+}
+
+/* Colour lives in wreath.svg -- an <img> can't inherit currentColor. */
+.laurel {
+	flex: none;
+	/*
+	 * Sized to stand taller than the text it frames -- the wreath's tips curl
+	 * inward, so a short one lets the last line spill out through them.
+	 */
+	width: clamp(56px, 9vw, 64px);
+	height: auto;
+}
+
+.laurel-right {
+	transform: scaleX(-1);
+}
+
+.rating-body {
+	text-align: center;
+}
+
+.rating-title {
+	margin: 0;
+	color: var(--muted);
+	font-size: 0.78rem;
+	font-weight: 650;
+	letter-spacing: 0.06em;
+	line-height: 1.2;
+	text-transform: uppercase;
+}
+
+.rating-score {
+	margin: 0.3rem 0 0;
+	font-size: clamp(1.9rem, 5vw, 2.4rem);
+	font-weight: 700;
+	letter-spacing: -0.03em;
+	line-height: 1;
+}
+
+.rating-score span {
+	color: var(--muted);
+	font-size: 0.48em;
+	font-weight: 600;
+}
+
+.stars {
+	display: block;
+	width: 106px;
+	height: auto;
+	margin: 0.55rem auto 0;
+	/* The unfilled half of a partly-filled star. */
+	color: rgba(14, 17, 22, 0.13);
+}
+
+.rating-count {
+	margin: 0.5rem 0 0;
+	color: var(--muted);
+	font-size: 0.8rem;
+}
+
 /* ---------- Ways to capture ---------- */
 
 .ways {
@@ -849,6 +918,31 @@ kbd {
 	.flags li {
 		width: 38px;
 		height: 38px;
+	}
+
+	/*
+	 * The badge has to hold one line at 320px, so the wreath gives up width
+	 * first -- it is decoration, and the count is the part worth reading.
+	 */
+	.rating {
+		gap: 0.1rem;
+	}
+
+	.laurel {
+		width: 54px;
+	}
+
+	.rating-title {
+		font-size: 0.72rem;
+	}
+
+	.stars {
+		width: 96px;
+	}
+
+	.rating-count {
+		font-size: 0.72rem;
+		text-wrap: balance;
 	}
 
 	.footer-inner {
