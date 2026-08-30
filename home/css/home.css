@@ -573,13 +573,27 @@ h3 {
 	padding-top: clamp(1.25rem, 3vw, 2rem);
 }
 
+/*
+ * Five cards divide into no equal column count, so the tracks are sized per
+ * row instead of per card: six columns, three cards of two across the top and
+ * two of three filling the bottom. Both rows end flush, and the wider pair
+ * carries the two longest bodies.
+ */
 .feature-grid {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+	grid-template-columns: repeat(6, 1fr);
 	gap: 1.25rem;
 	margin: 0;
 	padding: 0;
 	list-style: none;
+}
+
+.feature-grid .card {
+	grid-column: span 2;
+}
+
+.feature-grid .card:nth-child(n + 4) {
+	grid-column: span 3;
 }
 
 .card {
@@ -851,6 +865,17 @@ kbd {
 
 /* ---------- Small screens ---------- */
 
+@media (max-width: 940px) {
+	.feature-grid .card,
+	.feature-grid .card:nth-child(n + 4) {
+		grid-column: span 3;
+	}
+
+	.feature-grid .card:last-child {
+		grid-column: 1 / -1;
+	}
+}
+
 @media (max-width: 760px) {
 	.header-inner {
 		gap: 0.75rem;
@@ -867,6 +892,13 @@ kbd {
 
 	.site-nav a:nth-child(3) {
 		display: none;
+	}
+}
+
+@media (max-width: 620px) {
+	.feature-grid .card,
+	.feature-grid .card:nth-child(n + 4) {
+		grid-column: 1 / -1;
 	}
 }
 
