@@ -574,10 +574,10 @@ h3 {
 }
 
 /*
- * Five cards divide into no equal column count, so the tracks are sized per
- * row instead of per card: six columns, three cards of two across the top and
- * two of three filling the bottom. Both rows end flush, and the wider pair
- * carries the two longest bodies.
+ * Five cards divide into no equal column count, so the grid runs on six
+ * columns and every card spans two of them: three across the top, then the
+ * remaining pair indented by one column so it sits centred underneath. Every
+ * card keeps the same width and the block stays symmetrical about its middle.
  */
 .feature-grid {
 	display: grid;
@@ -592,8 +592,8 @@ h3 {
 	grid-column: span 2;
 }
 
-.feature-grid .card:nth-child(n + 4) {
-	grid-column: span 3;
+.feature-grid .card:nth-child(4) {
+	grid-column: 2 / span 2;
 }
 
 .card {
@@ -866,13 +866,17 @@ kbd {
 /* ---------- Small screens ---------- */
 
 @media (max-width: 940px) {
+	.feature-grid {
+		grid-template-columns: repeat(4, 1fr);
+	}
+
 	.feature-grid .card,
-	.feature-grid .card:nth-child(n + 4) {
-		grid-column: span 3;
+	.feature-grid .card:nth-child(4) {
+		grid-column: span 2;
 	}
 
 	.feature-grid .card:last-child {
-		grid-column: 1 / -1;
+		grid-column: 2 / span 2;
 	}
 }
 
@@ -897,7 +901,8 @@ kbd {
 
 @media (max-width: 620px) {
 	.feature-grid .card,
-	.feature-grid .card:nth-child(n + 4) {
+	.feature-grid .card:nth-child(4),
+	.feature-grid .card:last-child {
 		grid-column: 1 / -1;
 	}
 }
