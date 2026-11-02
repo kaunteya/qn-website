@@ -540,6 +540,23 @@ h3 {
 	font-size: 0.8rem;
 }
 
+/* ---------- Directory badge ---------- */
+
+.featured {
+	display: flex;
+	justify-content: center;
+	margin-top: 1.75rem;
+}
+
+.featured a {
+	display: block;
+	border-radius: 8px;
+}
+
+.featured img {
+	display: block;
+}
+
 /* ---------- Ways to capture ---------- */
 
 .ways {
